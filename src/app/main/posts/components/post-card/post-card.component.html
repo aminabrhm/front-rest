@@ -2,6 +2,7 @@
     <img [src]="imagePath" class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">{{post?.description}}</p>
+      <p class="card-text">{{post?.createdAt | date:'short'}} {{post?.user?.name}} </p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>

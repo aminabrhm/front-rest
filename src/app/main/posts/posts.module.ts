@@ -5,6 +5,7 @@ import { AddEditPostComponent } from './pages/add-edit-post/add-edit-post.compon
 import { PostsRoutingModule } from './posts-routing.module';
 import { ShowPostsComponent } from './pages/show-posts/show-posts.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
+import { FilterPipe } from 'src/shared/pipes/filter.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PostCardComponent } from './components/post-card/post-card.component';
   ],
   imports: [
     SharedModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    FilterPipe
   ],
   exports: [
     AddEditPostComponent

@@ -4,7 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -19,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatSelectModule,
     MatGridListModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
@@ -28,7 +29,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatGridListModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

@@ -6,10 +6,12 @@ import { IPost } from '../models/post';
 @Component({
   selector: 'app-show-posts',
   templateUrl: './show-posts.component.html',
-  styleUrls: ['./show-posts.component.css']
+  styleUrls: ['./show-posts.component.css'],
 })
 export class ShowPostsComponent {
   posts: IPost[] = []
+  searchPerm: string = ''
+
   //#region paging 
   totalRows: number = 0
   pageSize: number = 4
