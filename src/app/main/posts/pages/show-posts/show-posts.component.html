@@ -1,1 +1,13 @@
-<p>show-posts works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let post of posts" class="col-3 mb-4">
+            <app-post-card [post]="post"></app-post-card>
+        </div>
+        test
+        <ngb-pagination [collectionSize]="totalRows"
+            [pageSize]="pageSize" [(page)]="page" [boundaryLinks]="true" [maxSize]="5" [rotate]="true" [ellipses]="true"
+            (pageChange)="pageChange($event)">
+        </ngb-pagination>
+        test
+    </div>
+</div>

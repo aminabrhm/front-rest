@@ -14,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { AuthInterceptor } from 'src/shared/services/auth.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     LayoutModule,
     PostsModule,
     AuthModule,
-    SharedModule
+    SharedModule,
+    NgbModule
   ],
   providers: [
     {

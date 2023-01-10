@@ -18,30 +18,10 @@ export class HttpService {
   // Param >> url > url of api that concatenate with data
   Get<T>(url: string): Observable<T> { return this.http.get<T>(url); }
 
-  // Usage >> Get All Data - Or One Data
-  // Param >> url > url of api that concatenate with data and header
-  get<T>(url: string, urlheader: any): Observable<T> { return this.http.get<T>(url, { headers: ((urlheader == undefined || urlheader == null) ? (new HttpHeaders().set('Authorization', this.getAuthFromLocalStorage())) : (urlheader)) }); }
-
-  // Usage >> Get All Data - or one data 
-  // Param >> url > url of api that concatenate with data 
-  // Param >> param - paramter as object {key : value }
-  // param >> header - with authentication ids
-  GetWithParam<T>(url: string, param?: any, urlheader?: any): Observable<T> {
-    return this.http.get<T>(url,
-      {
-        params: param,
-        headers: ((urlheader == undefined || urlheader == null) ? (new HttpHeaders().set('Authorization', this.getAuthFromLocalStorage())) : (urlheader))
-      });
-  }
-
-  // Usage >> Get All Data - Or One Data 
-  // Param >> url > url of api that concatenate with data and header 
-  GetWithHeader<T>(url: string, Urlheader?: any): Observable<T> { return this.http.get<T>(url, { headers: ((Urlheader == undefined || Urlheader == null) ? (new HttpHeaders().set('Authorization', this.getAuthFromLocalStorage())) : (Urlheader)) }); }
-
   // Usage > Insert Data
   // Param >> url > of api && itemName >> data will add it
-  Post<T>(url: string, itemName: any, urlheader?: any): Observable<T> {
-    return this.http.post<T>(url, itemName, { headers: ((urlheader == undefined || urlheader == null) ? (new HttpHeaders().set('Authorization', this.getAuthFromLocalStorage())) : (urlheader)) });
+  Post<T>(url: string, itemName: any): Observable<T> {
+    return this.http.post<T>(url, itemName);
   }
 
   // Usage > Insert Data
