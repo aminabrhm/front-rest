@@ -5,10 +5,10 @@
   <mat-toolbar color="primary">
   <span>Amon App</span>
   <span class="header-spacer"></span>
-  <span *ngIf="isLogedin">
-    Welcome {{user.name}}
+  <span *ngIf="isLoggedIn">
+    Welcome Back
   </span>
-  <span *ngIf="!isLogedin">
+  <span *ngIf="!isLoggedIn">
     <a href="/auth/login">Login</a>
   </span>
 </mat-toolbar>

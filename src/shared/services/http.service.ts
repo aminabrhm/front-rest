@@ -6,27 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-  //header = new HttpHeaders().set('Authorization', this.authService.getAuthorizationToken());
 
   constructor(private http: HttpClient) { }
 
   getAuthFromLocalStorage(): any {
-    try {
-      // var values = JSON.parse(localStorage.getItem("token"));
-
-      /**
-       * 
-       */
-      // const authData = JSON.parse(localStorage.getItem("token"));
-      // if (authData == null) this.logout();
-      return '';
-    }
-    catch (error) { console.error(error); return undefined; }
+    const token = localStorage.getItem("token") || null;
+    return `Bearer ${token}`;
   }
 
   // Usage >> Get All Data - Or One Data
   // Param >> url > url of api that concatenate with data
-  Get<T>(url: string): Observable<T> { return this.http.get<T>(url, { headers: new HttpHeaders().set('Authorization', this.getAuthFromLocalStorage()) }); }
+  Get<T>(url: string): Observable<T> { return this.http.get<T>(url); }
 
   // Usage >> Get All Data - Or One Data
   // Param >> url > url of api that concatenate with data and header

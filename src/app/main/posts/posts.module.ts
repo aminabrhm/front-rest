@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from 'src/shared/shared.module';
 
 import { AddEditPostComponent } from './pages/add-edit-post/add-edit-post.component';
 import { PostsRoutingModule } from './posts-routing.module';

@@ -10,7 +10,10 @@ import { LayoutModule } from './layout/layout.module';
 import { PostsModule } from './main/posts/posts.module';
 import { CommonModule } from '@angular/common';
 import { AuthModule } from './main/auth/auth.module';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
+
+import { AuthInterceptor } from 'src/shared/services/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,13 @@ import { SharedModule } from './shared/shared.module';
     AuthModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

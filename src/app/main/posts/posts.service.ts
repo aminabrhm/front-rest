@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { HttpService } from 'src/app/shared/services/http.service';
+import { HttpService } from 'src/shared/services/http.service';
 import { Router } from '@angular/router';
 
 @Injectable({
