@@ -14,18 +14,14 @@ export class AuthInterceptor implements HttpInterceptor {
 
   // TODO > add custom header
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    let authReq = null
-    localStorage.getItem("token") ?
+    let authReq = req
+    localStorage.getItem("token") && (
       authReq = req.clone({
         headers: new HttpHeaders({
           'Authorization': `Bearer ${localStorage.getItem("token")}`,
         })
-      })
-      : authReq = req.clone({
-        headers: new HttpHeaders({
+      }))
 
-        })
-      })
     return next.handle(authReq);
   }
 }
