@@ -1,3 +1,4 @@
+import { ShowPostsComponent } from './pages/show-posts/show-posts.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddEditPostComponent } from './pages/add-edit-post/add-edit-post.component';
@@ -5,7 +6,7 @@ import { AddEditPostComponent } from './pages/add-edit-post/add-edit-post.compon
 const routes: Routes = [
   {
     path: '',
-    component: AddEditPostComponent
+    component: ShowPostsComponent
   },
 ];
 

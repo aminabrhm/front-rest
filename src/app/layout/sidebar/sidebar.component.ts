@@ -10,7 +10,7 @@ export class SidebarComponent {
 
   links: Link[] = [{
     title: 'Posts',
-    href: '/posts',
+    href: '/post',
     isActive:  true
   }]
 }

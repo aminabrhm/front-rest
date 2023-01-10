@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { PostsModule } from './main/posts/posts.module';
 import { CommonModule } from '@angular/common';
+import { AuthModule } from './main/auth/auth.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CommonModule } from '@angular/common';
     MatSidenavModule,
     BrowserAnimationsModule,
     LayoutModule,
-    PostsModule
+    PostsModule,
+    AuthModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
